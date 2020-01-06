@@ -22,13 +22,13 @@
     @include flex-centered;
     width: 100%;
     max-width: 960px;
-    background-color: #ffffff;
+    background-color: $color-white;
   }
 
   &__close-button{
     @include flex-centered;
     border: 0;
-    background-color: #ffffff;
+    background-color: $color-white;
     position: absolute;
     top: 0;
     right: 0;
@@ -41,7 +41,7 @@
       position: absolute;
       content: '';
       height: 1px;
-      background-color: #000000;
+      background-color: $color-black;
       width: 100%;
       top: 50%;
       left: 50%;
