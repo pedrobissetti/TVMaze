@@ -56,9 +56,13 @@
   }
   &__mobile {
     display: none;
+    &:hover {
+      color: $color-blueChill;
+      transition: all .3s ease;
+    }
     @include device(md) {
       display: block;
-      color: $color-blueChill;
+      color: $color-white;
       width: 36px;
       height: 36px;
       border-top: 4px solid;
@@ -80,10 +84,6 @@
       }
       &.active {
         border-top-color: transparent;
-        &:hover {
-          color: $color-white;
-          transition: all .3s ease;
-        }
         &::before {
           margin-top: 0px;
           top: 6px;
