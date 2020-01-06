@@ -46,13 +46,32 @@
   display: flex;
   flex-wrap: wrap;
   background: rgba(0, 0, 0, 0.6);
-  padding: 20px 0;
 }
 
 .show-detail {
+  padding: 20px 0;
+  &__favorite {
+    width: 270px;
+    margin-left: 40px;
+    font-size: 1.14rem;
+    cursor: pointer;
+    font-family: "Arial",sans-serif;
+    padding: 5px 0;
+    background: none;
+    color: #fff;
+    border: 2px solid;
+    border-radius: 4px;
+    outline: none;
+    &:hover {
+      color: $color-blueChill;
+      background: $color-white;
+      border: none;
+      transition: all .3s ease;
+    }
+  }
   &__wrapper {
     text-align: center;
-    
+    width: 354px;
   }
   &__poster {
     margin: 0 40px;
@@ -60,6 +79,7 @@
     img {
       max-width: 270px !important;
       flex-wrap: wrap;
+      height: 480px;
     }
   }
   &__information {
