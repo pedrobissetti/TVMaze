@@ -62,10 +62,17 @@
     }
   }
 
+  &__name {
+    font-size: $font-little;
+  }
+
   &__left,
   &__right{ 
     @include flex-centered;
     min-height: 680px;
+    @include device(md) {
+      min-height: 600px;
+    }
   }
 
   &__left{
@@ -78,32 +85,65 @@
   }
 
   &__information {
+    width: 110%;
     font-family: $family-IBM;
+    @include device(xsm) {
+      width: 150%;
+    }
     &--titulo {
       font-size: $font-medium;
       @include font-weight-bold;
+      @include device(xsm) {
+        font-size: $font-small;
+      }
     }
   }
   &__genres--titulo {
     padding-top: 15px;
     font-size: $font-medium;
     @include font-weight-bold;
+    @include device(xsm) {
+      font-size: $font-small;
+    }
   }
   &__genres {
     padding-bottom: 10px;
+    li {
+      @include device(xsm) {
+        font-size: $font-little;
+      }
+    }
   }
   &__desc {
     font-size: $font-medium;
     padding-bottom: 5px;
     @include font-weight-bold;
+    @include device(xsm) {
+      font-size: $font-small;
+    }
   }
   &__description {
     width: 300px;
-    font-size: $font-small;
+    font-size: $font-little;
+    @include device(sm) {
+      width: 280px;
+    }
+    @include device(xsm) {
+      width: 190px;
+    }
   }
   &__data {
     font-size: $font-medium;
     @include font-weight-bold;
     padding-top: 10px;
+    @include device(xsm) {
+      font-size: $font-small;
+    }
+  }
+  &__date {
+    font-size: $font-medium;
+    @include device(xsm) {
+      font-size: $font-small;
+    }
   }
 }

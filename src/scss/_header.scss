@@ -35,14 +35,11 @@
       outline: none;
       border: 1px solid $color-blueChill;
       border-radius: 3px;
-      @include device(xsm) {
-        width: 200px;
+      @include device(lg) {
+        width: 410px;
       }
       @include device(sm) {
         width: 300px;
-      }
-      @include device(lg) {
-        width: 410px;
       }
     }
     &--btn {
