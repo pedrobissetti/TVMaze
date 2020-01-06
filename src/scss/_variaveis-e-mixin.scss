@@ -1,0 +1,44 @@
+// CORES
+$color-white: #FFF;
+$color-black: #000;
+$color-blueChill: #39958c;
+
+// FONT-SIZE
+$font-little: 0.714rem; // 10px
+$font-small: 0.857rem; // 12px
+$font-normal: 1rem; // 14px
+$font-medium: 1.14rem; // 16px
+$font-large: 1.28rem; // 18px
+$font-xlarge: 1.71rem; // 24px
+$font-xxlarge: 2.57rem; // 36 px
+$font-xxxlarge: 3.42rem; // 48px
+
+// FONT-FAMILY
+$family-arial: 'Arial', sans-serif;
+$family-georgia: 'Georgia';
+$family-helvetica: 'Helvetica';
+
+// RESPONSIVO
+@mixin device($size) {
+  @if $size == sm {
+    @media (max-width: 767px) { @content ; }
+  }
+  @else if $size == lg {
+    @media (max-width: 960px) { @content ; }
+ }
+//    @else if $point == tablet {
+//     @media (min-width: 50em) { @content ; }
+//  }
+//   @else if $point == phablet {
+//     @media (min-width: 37.5em)  { @content ; }
+//  }
+//  @else if $point == mobileonly {
+//     @media (max-width: 37.5em)  { @content ; }
+//  }
+}
+
+@mixin flex-centered{
+  display: flex;
+  align-items: center;
+  justify-content: center;    
+}

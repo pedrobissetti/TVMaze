@@ -1,0 +1,63 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  padding: 15px 0;
+  justify-content: space-around;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 4999;
+
+  &__logo {
+    margin-top: 5px;
+  }
+  &__search {
+    padding: 18px 0;
+    &--bar {
+      width: 550px;
+      height: 36px;
+      font-family: $family-arial;
+      font-size: $font-medium;
+      padding: 12px 5px;
+      outline: none;
+      border: 2px solid $color-blueChill;
+    }
+    &--btn {
+      width: 40px;
+      height: 36px;
+      border: 1px solid $color-blueChill;
+      background: $color-blueChill;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      margin-left: -5px;
+      padding: 9px 0;
+      color: $color-white;
+    }
+  }
+  &__mobile {
+    display: none;
+
+  }
+  &__menu {
+    &--lista {
+      display: flex;
+      margin: 25px 0;
+      .divisor {
+        width: 1px;
+        background: $color-white;
+      }
+      &__item {
+        margin-left: 25px;
+        a {
+          color: $color-white;
+          font-size: $font-large;
+          transition: all .3s ease;
+          &:hover {
+            color: $color-blueChill;
+          }
+        }
+      }
+    }
+  }
+}

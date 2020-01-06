@@ -1,0 +1,15 @@
+body {
+  background: url("../../imagens/capa.png") no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-attachment: fixed;
+
+  &.has--no-scroll {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+.container {
+  width: 100%;
+}
