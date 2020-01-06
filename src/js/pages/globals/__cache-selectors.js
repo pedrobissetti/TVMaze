@@ -13,5 +13,5 @@ export default {
       description: document.querySelector('.js--show-pop-up-description'),
       date: document.querySelector('.js--show-pop-up-date'),
     }
-  }
+  },
 };
