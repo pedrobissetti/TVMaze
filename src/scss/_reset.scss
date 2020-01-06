@@ -23,9 +23,14 @@ html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, em, img
 	padding: 0;
 	border: 0;
 	vertical-align: baseline;
+	outline: none;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, ul {
 	font-size: 1em;
 	font-weight: normal;
+}
+
+button {
+	outline: none;
 }

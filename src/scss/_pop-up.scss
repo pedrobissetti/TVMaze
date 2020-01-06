@@ -27,14 +27,20 @@
 
   &__close-button{
     @include flex-centered;
-    border: 0;
-    background-color: $color-white;
-    position: absolute;
     top: 0;
     right: 0;
     height: 30px;
     width: 30px;
     padding: 0;
+    border: 0;
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: .2s;
+    background: none;
+    position: absolute;
+    &:hover {
+      transform: rotate(-180deg);
+    }
 
     &::after,
     &::before{
@@ -69,5 +75,35 @@
   &__right{
     width: 40%;
     padding: 0 5%;
+  }
+
+  &__information {
+    font-family: $family-IBM;
+    &--titulo {
+      font-size: $font-medium;
+      @include font-weight-bold;
+    }
+  }
+  &__genres--titulo {
+    padding-top: 15px;
+    font-size: $font-medium;
+    @include font-weight-bold;
+  }
+  &__genres {
+    padding-bottom: 10px;
+  }
+  &__desc {
+    font-size: $font-medium;
+    padding-bottom: 5px;
+    @include font-weight-bold;
+  }
+  &__description {
+    width: 300px;
+    font-size: $font-small;
+  }
+  &__data {
+    font-size: $font-medium;
+    @include font-weight-bold;
+    padding-top: 10px;
   }
 }

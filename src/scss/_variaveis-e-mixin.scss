@@ -17,29 +17,30 @@ $font-xxxlarge: 3.42rem; // 48px
 $family-arial: 'Arial', sans-serif;
 $family-georgia: 'Georgia';
 $family-helvetica: 'Helvetica';
-$font-IBM: 'IBM Plex Mono', monospace;
+$family-IBM: IBM Plex Mono, monospace;
 
 // RESPONSIVO
 @mixin device($size) {
-  @if $size == sm {
+  @if $size == xsm {
+    @media (max-width: 500px) { @content; }
+  }
+  @else if $size == sm {
     @media (max-width: 767px) { @content ; }
   }
-  @else if $size == lg {
+  @else if $size == md {
     @media (max-width: 960px) { @content ; }
  }
-//    @else if $point == tablet {
-//     @media (min-width: 50em) { @content ; }
-//  }
-//   @else if $point == phablet {
-//     @media (min-width: 37.5em)  { @content ; }
-//  }
-//  @else if $point == mobileonly {
-//     @media (max-width: 37.5em)  { @content ; }
-//  }
+ @else if $size == lg {
+   @media (max-width: 1130px) { @content ; }
+ }
 }
 
 @mixin flex-centered{
   display: flex;
   align-items: center;
   justify-content: center;    
+}
+
+@mixin font-weight-bold {
+  font-weight: bold;
 }

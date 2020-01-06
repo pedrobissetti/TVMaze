@@ -8,14 +8,14 @@
     font-size: $font-xxxlarge;
     text-transform: uppercase;
     letter-spacing: .1em;
-    font-weight: bold;
+    @include font-weight-bold;
     &--paragrafo {
       font-family: $family-arial;
       font-size: $font-large;
       color: $color-white;
       text-transform: uppercase;
       letter-spacing: .1em;
-      font-weight: bold;
+      @include font-weight-bold;
       margin: 10px 0;
     }
   }
@@ -32,7 +32,7 @@
       font-family: $family-helvetica;
       text-transform: uppercase;
       margin: 0 10px;
-      font-weight: bold;
+      @include font-weight-bold;
       &:hover {
         background: $color-white;
         color: $color-blueChill;
@@ -58,7 +58,7 @@
     font-family: "Arial",sans-serif;
     padding: 5px 0;
     background: none;
-    color: #fff;
+    color: $color-white;
     border: 2px solid;
     border-radius: 4px;
     outline: none;
@@ -71,7 +71,7 @@
   }
   &__wrapper {
     text-align: center;
-    width: 354px;
+    width: 355px;
   }
   &__poster {
     margin: 0 40px;
