@@ -5,7 +5,6 @@ import Favorites from './_favorites';
 
 import outsideClick from './_outsideclick';
 
-
 const init = () => {
   Favorites.init();
   ShowDetail.init();
