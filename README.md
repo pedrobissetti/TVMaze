@@ -7,7 +7,7 @@ Pré requisito: ter o NodeJS(**v10.16.3**) com NPM(**v6.0.1**) instalado.
 - 1º Baixe este repositório e salve aonde achar mais facil!
 - 2º Com a CLI de sua preferência, acesse o diretorio em que você salvou o projeto.
 - 3º digite na CLI **npm install** ou **yarn** para instalar todas as dependencias.
-- 4º Utilize o comando **yarm dev** para entrar no módo de produção, automatizado via **webpack(v.^4.41.5)**
+- 4º Utilize o comando **yarm dev** para entrar no módo de desenvolvimento, automatizado via **webpack(v.^4.41.5)**
 - 5º Utilize o comando **yarn build** modo de produção, criando seus devidos arquivos minificados
 
 ## Design:
