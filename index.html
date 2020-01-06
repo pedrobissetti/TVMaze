@@ -7,9 +7,8 @@
   <meta http-equiv='X-UA-Compatible' content='ie=edge'>
   <link rel='icon' href='imagens/favicon.png' />
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'
-    integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU' crossorigin='anonymous' 
-    />
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:700|Playfair+Display+SC" rel="stylesheet">
+    integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU' crossorigin='anonymous' />
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
   <link rel='stylesheet' href='./dist/css/tvmaze-common-globals.css'>
   <title>TVMaze</title>
   <script>
@@ -53,39 +52,20 @@
     </nav>
   </header>
 
-    <section class='container'>
-      <div class='intro'>
-        <h1 class='intro__titulo'>TVMaze as Melhoes Séries Aqui</h1>
-        <p class='intro__titulo--paragrafo'>Série para Todos os Gostos</p>
-        <div class='intro__btn'>
-          <a href='#listaTitulos'>Assista Agora</a>
-          <a href=''>Cadastre-se</a>
-        </div>
-      </div>
-
-      <div class='shows-list-container js--list-container'>
-
-      </div>
-    </section>
-
-  <!-- <div id='exibeSerie' class='modal fade' id='exampleModalCenter' tabindex='-1' role='dialog'
-    aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
-    <div class='modal-dialog modal-dialog-centered' role='document'>
-      <div class='modal-content'>
-        <div id='favDiv' class='modal-header'>
-          <h5 class='modal-title' id='modalTitulo'></h5>
-          <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
-            <span aria-hidden='true'>&times;</span>
-          </button>
-        </div>
-        <img id='imgModal'></img>
-        <div id='modalCorpo' class='modal-body'></div>
-        <i id='dtLancModal'></i>
-        <i class='modal-Genero' id='modalGenero'></i>
-        <i id='notaModal'></i>
+  <section class='container'>
+    <div class='intro'>
+      <h1 class='intro__titulo'>TVMaze as Melhoes Séries Aqui</h1>
+      <p class='intro__titulo--paragrafo'>Série para Todos os Gostos</p>
+      <div class='intro__btn'>
+        <a href='#listaTitulos'>Assista Agora</a>
+        <a href=''>Cadastre-se</a>
       </div>
     </div>
-  </div> -->
+
+    <div class='shows-list-container js--list-container'>
+
+    </div>
+  </section>
 
   <article class='show-pop-up js--show-pop-up'>
     <section class='show-pop-up__wrapper'>
@@ -99,9 +79,14 @@
       </div>
       <div class='show-pop-up__right'>
         <div class='show-pop-up__information'>
+          <h1 class="show-pop-up__information--titulo">Nome da Série:</h1>
           <h2 class='show-pop-up__name js--show-pop-up-name'></h2>
-          <ul class="show-pop-up__genres js--show-pop-up-genres"></ul>
+          <h3 class="show-pop-up__genres--titulo">Gêneros: </h3>
+          <ul class="show-pop-up__genres js--show-pop-up-genres">
+          </ul>
+          <h4 class="show-pop-up__desc">Descrição: </h4>
           <p class="show-pop-up__description js--show-pop-up-description"></p>
+          <h5 class="show-pop-up__data">Data de Lançamento: </h5>
           <p class="show-pop-up__date js--show-pop-up-date"></p>
         </div>
       </div>

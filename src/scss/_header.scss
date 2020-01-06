@@ -8,12 +8,24 @@
   justify-content: space-around;
   background: rgba(0, 0, 0, 0.6);
   z-index: 4999;
+  @include device(xsm) {
+    justify-content: flex-start;
+  }
 
   &__logo {
     margin-top: 5px;
+    @include device(xsm) {
+      margin: 5px 0 0 10px;
+    }
   }
   &__search {
     padding: 18px 0;
+    @include device(xsm) {
+      display: none;
+    }
+    @include device(md) {
+      margin: 0 auto;
+    }
     &--bar {
       width: 550px;
       height: 36px;
@@ -21,7 +33,17 @@
       font-size: $font-medium;
       padding: 12px 5px;
       outline: none;
-      border: 2px solid $color-blueChill;
+      border: 1px solid $color-blueChill;
+      border-radius: 3px;
+      @include device(xsm) {
+        width: 200px;
+      }
+      @include device(sm) {
+        width: 300px;
+      }
+      @include device(lg) {
+        width: 410px;
+      }
     }
     &--btn {
       width: 40px;
@@ -37,18 +59,104 @@
   }
   &__mobile {
     display: none;
-
+    @include device(md) {
+      display: block;
+      color: $color-blueChill;
+      width: 36px;
+      height: 36px;
+      border-top: 4px solid;
+      margin: 25px 240px 0 0;
+      float: right;
+      position: fixed;
+      right: -224px;
+      cursor: pointer;
+      -webkit-backface-visibility: hidden;
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        height: 4px;
+        margin-top: 6px;
+        background: currentColor;
+        position: relative;
+        transition: transform .3s ease;
+      }
+      &.active {
+        border-top-color: transparent;
+        &:hover {
+          color: $color-white;
+          transition: all .3s ease;
+        }
+        &::before {
+          margin-top: 0px;
+          top: 6px;
+          transform: rotate(135deg);
+        }
+        &::after {
+          margin-top: 0px;
+          top: 2px;
+          transform: rotate(45deg);
+        }
+      }
+    }
+    &--menu {
+      @include device(md) {
+        position: fixed;
+        background: none;
+        padding: 10px 5px 8px 0px;
+        top: 102px;
+        right: -10px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translate3d(60px, 0px, 0px);
+        transition: .3s;
+        @include device(xsm) {
+          top: 85px;
+        }
+        &.active {
+          opacity: 1;
+          width: 130px;
+          visibility: visible;
+          transform: translate3d(0px, 0px, 0px);
+        }
+        li {
+          display: block;
+          border-top: 2px solid $color-white;
+        }
+      }
+    }
   }
   &__menu {
+    @include device(md) {
+      background: rgba(0, 0, 0, 0.6);
+    }
     &--lista {
       display: flex;
-      margin: 25px 0;
+      margin-top: 25px;
+      @include device(md) {
+        margin: 0;
+        @include flex-centered;
+        flex-wrap: wrap;
+        text-align: center;
+      }
       .divisor {
         width: 1px;
         background: $color-white;
+        @include device(md) {
+          display: none;
+        }
       }
       &__item {
         margin-left: 25px;
+        @include device(md) {
+          padding-bottom: 15px;
+          &:hover {
+            border-color: $color-blueChill;
+          }
+        }
+        @include device(md) {
+          margin-left: 0;
+        }
         a {
           color: $color-white;
           font-size: $font-large;
