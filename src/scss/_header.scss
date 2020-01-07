@@ -107,12 +107,12 @@
         visibility: hidden;
         transform: translate3d(60px, 0px, 0px);
         transition: .3s;
+        width: 130px;
         @include device(xsm) {
           top: 85px;
         }
         &.active {
           opacity: 1;
-          width: 130px;
           visibility: visible;
           transform: translate3d(0px, 0px, 0px);
         }
